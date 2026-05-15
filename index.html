@@ -37,22 +37,22 @@
                     <p class="text-[10px] text-slate-400 uppercase tracking-widest">Titular</p>
                     <p class="text-lg font-bold text-slate-700 mb-4">${data.nombre}</p>
                     <p class="text-[10px] text-slate-400 uppercase tracking-widest">Especialidad</p>
-                    <p class="text-slate-600 font-medium">${data.curso}</p>
+                    <p class="text-slate-600 font-medium text-sm">${data.curso}</p>
                     
-                    <a href="${data.archivo}" target="_blank" class="mt-8 inline-block w-full bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 shadow-lg shadow-blue-200 transition-all">
+                    <a href="${data.archivo}" target="_blank" class="mt-8 inline-block w-full bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 shadow-lg shadow-blue-200 transition-all text-sm">
                         VER CERTIFICADO PDF
                     </a>
                     
-                    <p class="text-[10px] text-slate-300 mt-6 font-mono uppercase">Registro ID: ${id}</p>
+                    <p class="text-[10px] text-slate-300 mt-6 font-mono uppercase tracking-tighter">Registro ID: ${id}</p>
                 `;
             } else {
                 resDiv.innerHTML = `
                     <div class="text-red-500 text-6xl mb-4">✕</div>
                     <h2 class="text-xl font-bold text-slate-800">No Encontrado</h2>
-                    <p class="mt-2 text-slate-500 text-sm">El código de validación no es correcto.</p>
+                    <p class="mt-2 text-slate-500 text-sm">El código de validación no es correcto o no existe.</p>
                 `;
             }
-        }, 1500);
+        }, 1000);
     </script>
 </body>
 </html>
