@@ -19,7 +19,7 @@
             "L-001": { 
                 nombre: "LUIS ANTONIO MOLLOAPAZA LLAVE", 
                 curso: "Especialista en Seguridad", 
-                archivo: "certificado.pdf" // AQUÍ VA EL NOMBRE EXACTO DE TU PDF
+                archivo: "certificado.pdf" 
             }
         };
 
@@ -34,14 +34,15 @@
                     <div class="text-green-500 text-6xl mb-4">✓</div>
                     <h2 class="text-2xl font-bold text-slate-800">¡Certificado Auténtico!</h2>
                     <hr class="my-4">
-                    <p class="text-xs text-slate-400 uppercase tracking-widest">Titular</p>
+                    <p class="text-[10px] text-slate-400 uppercase tracking-widest">Titular</p>
                     <p class="text-lg font-bold text-slate-700 mb-4">${data.nombre}</p>
-                    <p class="text-xs text-slate-400 uppercase tracking-widest">Curso</p>
+                    <p class="text-[10px] text-slate-400 uppercase tracking-widest">Especialidad</p>
                     <p class="text-slate-600 font-medium">${data.curso}</p>
                     
                     <a href="${data.archivo}" target="_blank" class="mt-8 inline-block w-full bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 shadow-lg shadow-blue-200 transition-all">
                         VER CERTIFICADO PDF
                     </a>
+                    
                     <p class="text-[10px] text-slate-300 mt-6 font-mono uppercase">Registro ID: ${id}</p>
                 `;
             } else {
