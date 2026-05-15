@@ -1,0 +1,2 @@
+# VERIFICADOR-DE-CERTIFICADOS
+Mis-certificados
