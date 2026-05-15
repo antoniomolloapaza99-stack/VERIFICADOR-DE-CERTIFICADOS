@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Certificados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-xl shadow-lg text-center max-w-md">
+        <div id="resultado">
+            <h1 class="text-2xl font-bold text-gray-800 mb-4">Validación de Certificado</h1>
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+        </div>
+    </div>
+
+    <script>
+        // Simulamos una pequeña base de datos (Tú puedes aumentar más IDs aquí)
+        const certificados = {
+            "L-001": { nombre: "Luis Antonio Molloapaza", curso: "Especialista en Seguridad", fecha: "2024" },
+            "L-002": { nombre: "Juan Pérez", curso: "Logística Industrial", fecha: "2024" }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        const resDiv = document.getElementById('resultado');
+
+        setTimeout(() => {
+            if (certificados[id]) {
+                const data = certificados[id];
+                resDiv.innerHTML = `
+                    <div class="text-green-500 text-6xl mb-4">✓</div>
+                    <h2 class="text-xl font-bold text-gray-800">¡Certificado Auténtico!</h2>
+                    <p class="mt-4 text-gray-600 font-semibold uppercase">${data.nombre}</p>
+                    <p class="text-gray-500">Curso: ${data.curso}</p>
+                    <p class="text-sm text-gray-400 mt-2">ID: ${id}</p>
+                `;
+            } else {
+                resDiv.innerHTML = `
+                    <div class="text-red-500 text-6xl mb-4">✕</div>
+                    <h2 class="text-xl font-bold text-gray-800">No Encontrado</h2>
+                    <p class="mt-2 text-gray-500">Este código de certificado no es válido o ha expirado.</p>
+                `;
+            }
+        }, 1500);
+    </script>
+</body>
+</html>
